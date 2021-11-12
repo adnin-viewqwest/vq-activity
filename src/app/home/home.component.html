@@ -1,0 +1,12 @@
+<div class="container-fluid">
+  <div class="jumbotron text-center">
+    <h1>
+      <img class="logo" src="assets/logo_ViewQwest.jpg" alt="angular logo" />
+      <span translate>Hello world !</span>
+    </h1>
+    <app-loader [isLoading]="isLoading"></app-loader>
+    <q [hidden]="isLoading">Your Device: {{ device }}</q
+    ><br />
+    <q [hidden]="isLoading">Your IP: {{ ip }}</q>
+  </div>
+</div>

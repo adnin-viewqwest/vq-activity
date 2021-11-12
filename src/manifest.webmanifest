@@ -1,0 +1,17 @@
+{
+  "name": "ViewQwest",
+  "short_name": "ViewQwest",
+  "theme_color": "#CF202F",
+  "background_color": "#CF202F",
+  "display": "standalone",
+  "scope": "./",
+  "start_url": "./",
+  "icons": [
+    {
+      "src": "assets/favicon.ico",
+      "sizes": "16x15",
+      "type": "image/png/ico",
+      "purpose": "maskable any"
+    }
+  ]
+}
