@@ -11,23 +11,36 @@ export class HomeComponent implements OnInit {
   device: string | undefined;
   ip: string | undefined;
   isLoading = false;
+  lang: string = '';
+  result = ''
 
   constructor(private deviceService: DeviceService) {}
 
   ngOnInit() {
+  }
+
+  getHelloWorld(){
+    console.log(this.lang)
     this.isLoading = true;
-    const endpoint = '/utilities/eu-device';
+    const endpoint = '/hello-world';
     this.deviceService
-      .getDevice(endpoint)
+      .getHelloWorld(endpoint)
       .pipe(
         finalize(() => {
           this.isLoading = false;
         })
       )
       .subscribe((res: any) => {
-        const data = res.data;
-        this.device = data.device;
-        this.ip = data.ip;
+        console.log(res)
+        for (let key in res) {
+          if (this.lang == key) {
+            this.result = res[key]
+            return
+          } else {
+            this.result = "No Hello World :("
+          }
+          console.log(key, res);
+        }
       });
   }
 }

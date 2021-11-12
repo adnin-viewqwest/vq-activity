@@ -13,7 +13,7 @@ import { env } from './.env';
 export const environment = {
   production: false,
   version: env.npm_package_version + '-dev',
-  serverUrl: 'https://demo.vqbn.com/ospv4/public/api/v1',
+  serverUrl: 'http://8a50-2001-e68-542d-1b29-1c55-fcd2-dfb3-1f88.ngrok.io',
   defaultLanguage: 'en-US',
   supportedLanguages: ['en-US', 'fr-FR'],
 };
