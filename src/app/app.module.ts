@@ -15,6 +15,7 @@ import { ShellModule } from './shell/shell.module';
 import { AboutModule } from './about/about.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   imports: [
@@ -24,6 +25,7 @@ import { AppRoutingModule } from './app-routing.module';
     HttpClientModule,
     RouterModule,
     TranslateModule.forRoot(),
+    BrowserAnimationsModule,
     NgbModule,
     SharedModule,
     ShellModule,

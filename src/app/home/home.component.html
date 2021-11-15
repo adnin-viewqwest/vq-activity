@@ -1,13 +1,17 @@
 <div class="container-fluid">
   <div class="jumbotron text-center">
+    <p>
+      Please select your Language to translate "Hello World".
+    </p>
     <app-loader [isLoading]="isLoading"></app-loader>
     <div class="container">
       <label for="lang">Enter Language</label>
-      <input [(ngModel)]="lang"  id="lang" type="text" class="form-control"> <br>
-      <button class="btn btn-primary" (click)="getHelloWorld()">Print</button>
+      <select #t (change)="onChange(t.value)">
+        <option *ngFor="let i of languages" [value]="i.key">{{i.key}}</option>
+      </select>
       <h3>Result:</h3>
-      <div>
-        {{result}}
+      <div [@pulse]="animState" (@pulse.done)="animDone()">
+        {{lang}}
       </div>
     </div>
     <!-- <q [hidden]="isLoading">Your Device: {{ device }}</q

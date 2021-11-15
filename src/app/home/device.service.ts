@@ -19,7 +19,7 @@ export class DeviceService {
   getHelloWorld(endpoint: string): Observable<string> {
     return this.httpClient.get(endpoint).pipe(
       map((body: any) => body),
-      catchError(() => of('Error, could not load joke :-('))
+      catchError(() => of('Error, could not load endpoint :-('))
     );
   }
 }
